@@ -37,12 +37,13 @@ class Manager extends Employee {
   }
 }
 
+const manager = new Manager(1, "Alkis", "Alkisviadis", 1234, 100000);
 const kirk = new Employee(2, "Kirk", "RastaMan", 2222, 800000);
 const hizki = new Employee(5, "Hizki", "BigMann", 3333, 800000);
-const manager = new Manager(1, "Alkis", "Alkisviadis", 1234, 100000);
 
 manager.addManagedEmployee(kirk);
 manager.addManagedEmployee(hizki);
+console.log("-------------------------------");
 manager.removeManagedEmployee(kirk);
-
-console.log("line 51", manager.managedEmployees);
+console.log("-------------------------------");
+console.log("managedEmployees array:\n", manager.managedEmployees);
